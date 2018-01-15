@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <title>Add Bebida</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="jumbotron">
+                <h2>
+                        Agregar Bebidas
+                </h2>
+        </div>
+
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active">
+                 <a href="agregarPlatillo.html">Agregar Platillo</a>
+            </li>
+            <li role="presentation" class="active">
+                <a href="bebidas.html">Ver Bebidas</a>
+           </li>
+        </ul>
+        <button class="btn btn-primary" onclick="logout()">Salir</button>
+
+        <!--Subir imagen de cada plato -->
+        <div>
+            <input type="file" name="imagen" onchange="visualizarArchivoBebidas()"> <br/>
+            <img id="imgPlato"src="" height="300" alt="Imagen Bebida">
+        </div>
+    <!--Formulario del producto -->
+        <div>
+            <form onsubmit="return funcionFormBebidas(evento)" >
+                Nombre: <input id="nombre"  type="text" class="form-control" name="nombre" required > <br/>
+                Descripcion: <textarea id="descripcion"  class="form-control" required ></textarea> <br/>
+                Precio: <input id="precio" name="precio" class="form-control" type="text" required> <br/>
+                URL Imagen: <input id="imgDir"  class="form-control" name="direccion"type="text" required> <br/>
+                <input  class="btn btn-success"type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap.native@2.0.15/dist/bootstrap-native-v4.min.js"></script>
+</html>
